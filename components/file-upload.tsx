@@ -27,6 +27,7 @@ export default function FileUpload({
   };
   const onUpdateFile = (newFiles: UploadFileResponse[]) => {
     onChange([...value, ...newFiles]);
+    console.log('newFiles', newFiles);
   };
   return (
     <div>
@@ -52,7 +53,7 @@ export default function FileUpload({
                   fill
                   className="object-cover"
                   alt="Image"
-                  src={item.fileUrl || ''}
+                  src={item.url || ''}
                 />
               </div>
             </div>
